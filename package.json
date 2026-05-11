@@ -1,0 +1,18 @@
+{
+  "name": "program-posting-bot",
+  "version": "1.0.0",
+  "description": "Бот, который публикует посты по 11 шагам Программы восстановления личности в Telegram-каналы и раз в неделю выводит диагностику как воронку",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test:deep": "node index.js --test-deep",
+    "test:practice": "node index.js --test-practice",
+    "test:diagnostic": "node index.js --test-diagnostic"
+  },
+  "dependencies": {
+    "node-cron": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
