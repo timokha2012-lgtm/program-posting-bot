@@ -230,27 +230,4 @@ const STEPS = [
     ],
     practices: [
       { title: 'Аудит качества жизни', steps: 'Сферы 1-10: сон, тело, безопасность, дом, финансы, труд, отношения, отдых, удовольствие, творчество, вера, сообщество.' },
-      { title: 'Карта безопасной радости', steps: 'Минимум 10 пунктов: прогулка, музыка, разговор, природа, ремесло, баня, книга, нормальный досуг.' },
-      { title: 'Обычная неделя без самосаботажа', steps: 'Ритм: сон, еда, работа, паузы, движение, общение, духовная жизнь, простая радость.' },
-      { title: 'Разрешение на отдых', steps: 'Что у меня запрещает отдых? Чьи голоса звучат? Какой здоровый отдых я могу разрешить себе уже сейчас?' }
-    ]
-  }
-];
-
-// Текущий шаг: 1 шаг = 4 недели работы.
-// 11 шагов = 44 недели = ~10 месяцев. После 11-го — снова с 1-го (новые подтемы за счёт ИИ).
-function getCurrentStep(startDateStr) {
-  const startDate = new Date(startDateStr);
-  const now = new Date();
-  const weeksPassed = Math.floor((now - startDate) / (7 * 24 * 60 * 60 * 1000));
-  const stepIndex = Math.floor(weeksPassed / 4) % 11;
-  const weekInStep = (weeksPassed % 4) + 1; // 1-4
-  return { step: STEPS[stepIndex], weekInStep, weeksPassed };
-}
-
-// Случайный элемент массива
-function randomFrom(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
-
-module.exports = { STEPS, getCurrentStep, randomFrom };
+      { title: 'Карта
