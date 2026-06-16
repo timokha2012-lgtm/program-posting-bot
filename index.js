@@ -10,7 +10,7 @@
 const https = require('https');
 const cron = require('node-cron');
 
-const { STEPS, getCurrentStep, randomFrom } = require('./steps.js');
+const { STEPS, getCurrentStep, randomFrom } = require('./steps.js');h
 const { deepPostPrompt, practicePostPrompt, diagnosticPostPrompt } = require('./prompts.js');
 
 // ─────────── НАСТРОЙКИ (берутся из переменных окружения Railway) ───────────
@@ -60,7 +60,7 @@ async function callClaude(prompt) {
     'api.anthropic.com',
     '/v1/messages',
     {
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-6',
       max_tokens: 1200,
       messages: [{ role: 'user', content: prompt }]
     },
