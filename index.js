@@ -10,7 +10,7 @@
 const https = require('https');
 const cron = require('node-cron');
 
-const { STEPS, getCurrentStep, randomFrom } = require('./steps.js');h
+const { STEPS, getCurrentStep, randomFrom } = require('./steps.js');
 const { deepPostPrompt, practicePostPrompt, diagnosticPostPrompt } = require('./prompts.js');
 
 // ─────────── НАСТРОЙКИ (берутся из переменных окружения Railway) ───────────
