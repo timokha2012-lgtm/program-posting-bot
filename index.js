@@ -41,6 +41,7 @@ function apiRequest(hostname, path, data, extraHeaders = {}) {
       }
     };
     const req = https.request(options, (res) => {
+      res.setEncoding('utf8');
       let chunks = '';
       res.on('data', c => chunks += c);
       res.on('end', () => {
