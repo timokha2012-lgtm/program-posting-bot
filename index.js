@@ -1,6 +1,6 @@
 // Файл: index.js
 // Главный файл бота. Не пугайся, разберём по кусочкам.
-// Бот ежедневно публикует посты в @go_rehab и @Helpforaddicts по программе.
+// Бот ежедневно публикует посты в @go_rehab по программе.
 // Расписание (МСК):
 //   Пн / Ср / Пт 10:00 — глубокий пост по теме шага
 //   Вт / Чт      10:00 — пост-практика
@@ -16,7 +16,7 @@ const { deepPostPrompt, practicePostPrompt, diagnosticPostPrompt } = require('./
 // ─────────── НАСТРОЙКИ (берутся из переменных окружения Railway) ───────────
 const TG_TOKEN       = process.env.TG_TOKEN;        // токен от @BotFather
 const ANTHROPIC_KEY  = process.env.ANTHROPIC_KEY;   // ключ от console.anthropic.com
-const CHANNELS       = ['@go_rehab', '@Helpforaddicts'];
+const CHANNELS       = ['@go_rehab'];
 const START_DATE     = process.env.START_DATE || '2026-05-12'; // дата старта программы
 const TIMEZONE       = 'Europe/Moscow';
 
